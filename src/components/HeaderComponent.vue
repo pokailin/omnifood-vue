@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{ 'nav-open': openNav }">
     <a href="#">
       <img class="logo" src="../assets/omnifood-logo.png" alt="Logo" />
     </a>
@@ -14,14 +14,28 @@
     </nav>
 
     <button class="btn-mobile-nav">
-      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="menu-outline" @click="openNav = !openNav"></ion-icon>
+      <ion-icon
+        class="icon-mobile-nav"
+        name="close-outline"
+        @click="openNav = !openNav"
+        v-if="openNav"
+      ></ion-icon>
     </button>
   </header>
 </template>
 
+<script lang="ts">
+import { Vue } from 'vue-class-component';
+
+export default class HeaderComponent extends Vue {
+  openNav = false;
+}
+</script>
+
 <style>
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
