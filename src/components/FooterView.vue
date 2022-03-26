@@ -22,7 +22,9 @@
             </a>
           </li>
         </ul>
-        <p class="copyright">Copyright &copy; 2027 by Omnifood, Inc. All rights reserved.</p>
+        <p class="copyright">
+          Copyright &copy; {{ currentYear }} by Omnifood, Inc. All rights reserved.
+        </p>
       </div>
       <div class="address-col">
         <p class="footer-heading">Contact us</p>
@@ -85,6 +87,14 @@
     </div>
   </footer>
 </template>
+
+<script lang="ts">
+import { Vue } from 'vue-class-component';
+
+export default class FooterView extends Vue {
+  currentYear = new Date().getFullYear();
+}
+</script>
 
 <style>
 .footer {
