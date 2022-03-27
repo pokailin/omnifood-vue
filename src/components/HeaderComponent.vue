@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/runtime-core';
+import { defineComponent } from 'vue';
 import links from '../data/headerNavLinks';
 
 export default defineComponent({

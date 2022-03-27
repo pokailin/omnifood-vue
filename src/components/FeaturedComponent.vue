@@ -3,25 +3,32 @@
     <div class="container">
       <h2 class="heading-featured-in">As featured in</h2>
       <div class="logos">
-        <img src="../assets/logos/techcrunch.png" alt="Techcrunch logo" width="562" height="80" />
         <img
-          src="../assets/logos/business-insider.png"
-          alt="Business Insider logo"
-          width="252"
-          height="80"
+          v-for="(logo, index) in featuredLogos"
+          :key="index"
+          :src="require(`../assets/logos/${logo.src}`)"
+          :alt="logo.alt"
+          :width="logo.width"
+          :height="logo.height"
         />
-        <img
-          src="../assets/logos/the-new-york-times.png"
-          alt="The New York Times logo"
-          width="609"
-          height="80"
-        />
-        <img src="../assets/logos/forbes.png" alt="Forbes logo" width="306" height="80" />
-        <img src="../assets/logos/usa-today.png" alt="USA Today logo" width="428" height="80" />
       </div>
     </div>
   </section>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import logos from '@/data/featuredLogos';
+
+export default defineComponent({
+  name: 'FeaturedComponent',
+  setup() {
+    const featuredLogos = logos;
+
+    return { featuredLogos };
+  },
+});
+</script>
 
 <style>
 .section-featured {
