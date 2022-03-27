@@ -1,5 +1,5 @@
 <template>
-  <section class="pricing-section">
+  <section class="pricing-section" id="pricing">
     <div class="container">
       <span class="subheading">Pricing</span>
       <h2 class="heading-secondary">Eating well without breaking the bank</h2>

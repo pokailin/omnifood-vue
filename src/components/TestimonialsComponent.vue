@@ -1,5 +1,5 @@
 <template>
-  <section class="section-testimonials">
+  <section class="section-testimonials" id="testimonials">
     <div class="testimonials-container">
       <span class="subheading">Testimonials</span>
       <h2 class="heading-secondary">Once you try it, you can't go back</h2>

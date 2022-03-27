@@ -1,5 +1,5 @@
 <template>
-  <section class="cta-section">
+  <section class="cta-section" id="cta">
     <div class="container">
       <div class="cta">
         <div class="cta-text-box">

@@ -1,5 +1,5 @@
 <template>
-  <section class="section-meals">
+  <section class="section-meals" id="meals">
     <div class="container center-text">
       <span class="subheading">Meals</span>
       <h2 class="heading-secondary">Omnifood AI chooses from over 5,000+ recipes!</h2>

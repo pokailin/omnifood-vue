@@ -7,8 +7,8 @@
           The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to
           your personal tastes and nutritional needs.
         </p>
-        <a href="#" class="btn btn--full margin-right-sm">Start eating well</a>
-        <a href="#" class="btn btn--outline">Learn more &darr;</a>
+        <a href="#cta" class="btn btn--full margin-right-sm">Start eating well</a>
+        <a href="#how" class="btn btn--outline">Learn more &darr;</a>
         <div class="delivered-meals">
           <div class="delivered-imgs">
             <img

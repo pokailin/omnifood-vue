@@ -5,11 +5,11 @@
     </a>
     <nav class="main-nav">
       <ul class="main-nav-list">
-        <li><a class="main-nav-link" href="#">How It Works</a></li>
-        <li><a class="main-nav-link" href="#">Meals</a></li>
-        <li><a class="main-nav-link" href="#">Testimonials</a></li>
-        <li><a class="main-nav-link" href="#">Pricing</a></li>
-        <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
+        <li><a class="main-nav-link" href="#how">How It Works</a></li>
+        <li><a class="main-nav-link" href="#meals">Meals</a></li>
+        <li><a class="main-nav-link" href="#testimonials">Testimonials</a></li>
+        <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+        <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
       </ul>
     </nav>
 
@@ -26,11 +26,21 @@
 </template>
 
 <script lang="ts">
-import { Vue } from 'vue-class-component';
+import { defineComponent } from '@vue/runtime-core';
 
-export default class HeaderComponent extends Vue {
-  openNav = false;
-}
+export default defineComponent({
+  name: 'HeaderView',
+  setup() {
+    let openNav = false;
+    // const navLink = ref(null);
+
+    // onMounted(() => {
+    //   console.log(navLink.value);
+    // });
+
+    return { openNav };
+  },
+});
 </script>
 
 <style>
