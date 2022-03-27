@@ -22,13 +22,17 @@
         </div>
       </div>
       <div class="hero-img-box">
-        <img
-          class="hero-img"
-          src="../assets/hero.png"
-          alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-          width="1479px"
-          height="1459px"
-        />
+        <picture>
+          <source srcset="../assets/hero-min.webp" type="image/webp" />
+          <source srcset="../assets/hero-min.png" type="image/png" />
+          <img
+            class="hero-img"
+            src="../assets/hero-min.png"
+            alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+            width="1200px"
+            height="1184px"
+          />
+        </picture>
       </div>
     </div>
   </section>
