@@ -5,11 +5,15 @@
     </a>
     <nav class="main-nav">
       <ul class="main-nav-list">
-        <li><a class="main-nav-link" href="#how">How It Works</a></li>
-        <li><a class="main-nav-link" href="#meals">Meals</a></li>
-        <li><a class="main-nav-link" href="#testimonials">Testimonials</a></li>
-        <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
-        <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
+        <li v-for="navLink in navLinks" :key="navLink.href">
+          <a
+            class="main-nav-link"
+            :class="{ 'nav-cta': navLink.href === 'cta' }"
+            :href="`#${navLink.href}`"
+          >
+            {{ navLink.name }}
+          </a>
+        </li>
       </ul>
     </nav>
 
@@ -27,18 +31,20 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/runtime-core';
+import links from '../data/headerNavLinks';
 
 export default defineComponent({
   name: 'HeaderView',
   setup() {
     let openNav = false;
+    const navLinks = links;
     // const navLink = ref(null);
 
     // onMounted(() => {
     //   console.log(navLink.value);
     // });
 
-    return { openNav };
+    return { openNav, navLinks };
   },
 });
 </script>
