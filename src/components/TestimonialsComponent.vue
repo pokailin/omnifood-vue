@@ -56,42 +56,102 @@
     </div>
     <div class="gallery">
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-1.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-1.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
         <!-- CAN ONLY USE INSIDE OF FIGURE -->
         <!-- <figcaption>Caption</figcaption> -->
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-2.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-2.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-3.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-3.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-4.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-4.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-5.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-5.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-6.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-6.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-7.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-7.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-8.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-8.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-9.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-9.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-10.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-10.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-11.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-11.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/gallery/gallery-12.jpg" alt="Photo of beautifully arranged food" />
+        <img
+          src="../assets/gallery/gallery-12.jpg"
+          alt="Photo of beautifully arranged food"
+          width="800"
+          height="800"
+        />
       </figure>
     </div>
   </section>
@@ -148,6 +208,7 @@
 .gallery-item img {
   display: block;
   width: 100%;
+  height: auto;
   transition: transform 400ms;
 }
 

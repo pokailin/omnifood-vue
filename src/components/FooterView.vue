@@ -3,7 +3,7 @@
     <div class="container grid grid--footer">
       <div class="logo-col">
         <a href="#" class="footer-logo">
-          <img class="logo" src="../assets/omnifood-logo.png" alt="Logo" />
+          <img class="logo" src="../assets/omnifood-logo.png" alt="Logo" width="1212" height="63" />
         </a>
         <ul class="social-links">
           <li>

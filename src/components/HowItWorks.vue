@@ -20,6 +20,8 @@
           class="step-img"
           src="../assets/app/app-screen-1.png"
           alt="iPhone app preferences selection screen"
+          width="400"
+          height="809"
         />
       </div>
 
@@ -29,6 +31,8 @@
           class="step-img"
           src="../assets/app/app-screen-2.png"
           alt="iPhone app meal approving plan screen"
+          width="400"
+          height="809"
         />
       </div>
       <div class="step-text-box">
@@ -50,7 +54,13 @@
         </p>
       </div>
       <div class="step-img-box">
-        <img class="step-img" src="../assets/app/app-screen-3.png" alt="iPhone app delivery screen" />
+        <img
+          class="step-img"
+          src="../assets/app/app-screen-3.png"
+          alt="iPhone app delivery screen"
+          width="400"
+          height="809"
+        />
       </div>
     </div>
   </section>
@@ -100,6 +110,7 @@
 
 .step-img {
   width: 35%;
+  height: auto;
 }
 
 .step-description {

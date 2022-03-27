@@ -1,7 +1,7 @@
 <template>
   <header class="header" :class="{ 'nav-open': openNav }">
     <a href="#">
-      <img class="logo" src="../assets/omnifood-logo.png" alt="Logo" />
+      <img class="logo" src="../assets/omnifood-logo.png" alt="Logo" width="1212" height="63" />
     </a>
     <nav class="main-nav">
       <ul class="main-nav-list">
@@ -58,6 +58,7 @@ export default defineComponent({
 
 .logo {
   height: 2.2rem;
+  width: auto;
 }
 
 .main-nav-list {

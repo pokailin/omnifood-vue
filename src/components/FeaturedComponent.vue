@@ -3,11 +3,21 @@
     <div class="container">
       <h2 class="heading-featured-in">As featured in</h2>
       <div class="logos">
-        <img src="../assets/logos/techcrunch.png" alt="Techcrunch logo" />
-        <img src="../assets/logos/business-insider.png" alt="Business Insider logo" />
-        <img src="../assets/logos/the-new-york-times.png" alt="The New York Times logo" />
-        <img src="../assets/logos/forbes.png" alt="Forbes logo" />
-        <img src="../assets/logos/usa-today.png" alt="USA Today logo" />
+        <img src="../assets/logos/techcrunch.png" alt="Techcrunch logo" width="562" height="80" />
+        <img
+          src="../assets/logos/business-insider.png"
+          alt="Business Insider logo"
+          width="252"
+          height="80"
+        />
+        <img
+          src="../assets/logos/the-new-york-times.png"
+          alt="The New York Times logo"
+          width="609"
+          height="80"
+        />
+        <img src="../assets/logos/forbes.png" alt="Forbes logo" width="306" height="80" />
+        <img src="../assets/logos/usa-today.png" alt="USA Today logo" width="428" height="80" />
       </div>
     </div>
   </section>
@@ -35,6 +45,7 @@
 
 .logos img {
   height: 3.2rem;
+  width: auto;
   filter: brightness(0);
   opacity: 50%;
 }

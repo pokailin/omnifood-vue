@@ -16,6 +16,8 @@
               :key="index"
               :src="require('../assets/customers/customer-' + index + '.jpg')"
               alt="Customer photo"
+              width="128"
+              height="128"
             />
           </div>
           <p class="delivered-text"><span>250,000+</span> meals delivered last year!</p>

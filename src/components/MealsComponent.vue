@@ -7,7 +7,13 @@
 
     <div class="container grid grid--3-cols margin-bottom-md">
       <div class="meal">
-        <img class="meal-img" src="../assets/meals/meal-1.jpg" alt="Japanese Gyozas" />
+        <img
+          class="meal-img"
+          src="../assets/meals/meal-1.jpg"
+          alt="Japanese Gyozas"
+          width="700"
+          height="467"
+        />
         <div class="meal-content">
           <div class="meal-tags">
             <span class="tag tag--vegetarian">Vegetarian</span>
@@ -30,7 +36,13 @@
         </div>
       </div>
       <div class="meal">
-        <img class="meal-img" src="../assets/meals/meal-2.jpg" alt="Avocado Salad" />
+        <img
+          class="meal-img"
+          src="../assets/meals/meal-2.jpg"
+          alt="Avocado Salad"
+          width="700"
+          height="467"
+        />
         <div class="meal-content">
           <div class="meal-tags">
             <span class="tag tag--vegan">Vegan</span>
@@ -179,6 +191,7 @@
 
 .meal-img {
   width: 100%;
+  height: auto;
 }
 
 .all-recipes {
