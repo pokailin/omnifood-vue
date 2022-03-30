@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{ 'nav-open': openNav }">
+  <header class="header" :class="{ 'nav-open': openNav, 'sticky-navigation': isStickyNavigation }">
     <a href="#">
       <img class="logo" src="../assets/omnifood-logo.png" alt="Logo" width="1212" height="63" />
     </a>
@@ -10,6 +10,7 @@
             class="main-nav-link"
             :class="{ 'nav-cta': navLink.href === 'cta' }"
             :href="`#${navLink.href}`"
+            @click="handleClick"
           >
             {{ navLink.name }}
           </a>
@@ -30,21 +31,28 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import links from '../data/headerNavLinks';
 
 export default defineComponent({
   name: 'HeaderView',
+  props: {
+    isStickyNavigation: {
+      required: true,
+      type: Boolean,
+    },
+  },
   setup() {
-    let openNav = false;
+    const openNav = ref(false);
     const navLinks = links;
-    // const navLink = ref(null);
 
-    // onMounted(() => {
-    //   console.log(navLink.value);
-    // });
+    const handleClick = () => {
+      if (openNav.value) {
+        openNav.value = !openNav.value;
+      }
+    };
 
-    return { openNav, navLinks };
+    return { openNav, navLinks, handleClick };
   },
 });
 </script>
@@ -116,5 +124,18 @@ export default defineComponent({
 
 .icon-mobile-nav[aria-label='close outline'] {
   display: none;
+}
+
+.sticky-navigation {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 8rem;
+  width: 100%;
+  padding-block: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
 }
 </style>

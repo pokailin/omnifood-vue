@@ -1,7 +1,7 @@
 <template>
-  <HeaderComponent />
+  <HeaderComponent :isStickyNavigation="isStickyNav" />
   <main>
-    <Hero />
+    <Hero @endReached="onEndReached($event)" />
     <FeaturedComponent />
     <HowItWorks />
     <MealsComponent />
@@ -13,7 +13,6 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
 import HeaderComponent from './components/HeaderComponent.vue';
 import Hero from './components/Hero.vue';
 import HowItWorks from './components/HowItWorks.vue';
@@ -23,8 +22,11 @@ import TestimonialsComponent from './components/TestimonialsComponent.vue';
 import PricingComponent from './components/PricingComponent.vue';
 import CallToAction from './components/CallToAction.vue';
 import FooterView from './components/FooterView.vue';
+import { defineComponent } from '@vue/runtime-core';
+import { ref } from 'vue';
 
-@Options({
+export default defineComponent({
+  name: 'AppView',
   components: {
     HeaderComponent,
     Hero,
@@ -36,8 +38,14 @@ import FooterView from './components/FooterView.vue';
     CallToAction,
     FooterView,
   },
-})
-export default class App extends Vue {}
+  setup() {
+    const isStickyNav = ref(false);
+
+    const onEndReached = (isEndReached: boolean) => (isStickyNav.value = isEndReached);
+
+    return { isStickyNav, onEndReached };
+  },
+});
 </script>
 
 <style>

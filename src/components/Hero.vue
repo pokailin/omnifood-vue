@@ -1,5 +1,5 @@
 <template>
-  <section class="section-hero">
+  <section ref="heroRef" class="section-hero" :class="{ 'header-margin': isHeaderMargin }">
     <div class="hero">
       <div class="hero-text-box">
         <h1 class="heading-primary">A healthy meal delivered to your door, every single day</h1>
@@ -41,18 +41,47 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
+import { defineComponent, onMounted } from '@vue/runtime-core';
+import { ref } from 'vue';
 
-@Options({
-  components: {},
-})
-export default class Hero extends Vue {}
+export default defineComponent({
+  name: 'HeroView',
+  setup(_, { emit }) {
+    const heroRef = ref<Element | null>(null);
+    const isHeaderMargin = ref(false);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const ent = entries[0];
+
+        isHeaderMargin.value = !ent.isIntersecting;
+        emit('endReached', !ent.isIntersecting);
+      },
+      {
+        root: null, // In the viewport
+        threshold: 0,
+        rootMargin: '-72px',
+      }
+    );
+
+    onMounted(() => {
+      if (heroRef.value) {
+        observer.observe(heroRef.value);
+      }
+    });
+
+    return { heroRef, isHeaderMargin };
+  },
+});
 </script>
 
 <style>
 .section-hero {
   background: #fdf2e9;
   padding: 4.8rem 6.4rem 9.6rem;
+}
+
+.header-margin {
+  margin-top: 9.6rem;
 }
 
 .hero {
